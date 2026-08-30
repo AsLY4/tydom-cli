@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tydom-cli"
+version = "0.1.0"
+description = "Terminal client for Delta Dore Tydom gateways (exercises pytydom end to end)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["aiohttp>=3.9", "pytydom>=0.1.0"]
+
+[project.scripts]
+tydom = "tydom_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tydom_cli*"]
